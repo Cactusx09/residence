@@ -33,6 +33,7 @@ $(function() {
         prevButton: '.swiper-button-prev',
         spaceBetween: 30,
         direction: 'vertical',
+		autoHeight: true,
         autoplay: 4000,
         loop: true
     });
