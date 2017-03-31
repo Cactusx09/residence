@@ -176,7 +176,23 @@ $(function() {
         spaceBetween: 30,
         scrollbarDraggable: true,
         grabCursor: true,
+		breakpoints: {
+			700: {
+			  slidesPerView: 2
+			},
+			550: {
+			  slidesPerView: 1
+			}
+		}
     });
+
+	//mobile sliders
+	if (window.matchMedia('(max-width: 670.5px)').matches) {
+		$('.about__bottom,.advantages__items, .audience__items, .reviews__bottom, .reason__items').lightSlider({
+			item: 1,
+			adaptiveHeight: true
+		});
+	}
 
     $('input[type="file"]').on('change', function(event) {
         if ($(this).val()) {
