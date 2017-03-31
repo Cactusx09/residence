@@ -15,9 +15,9 @@
     opacity: 0;
     background-color: rgba(#141720, 0.75);
     transition: 0.5s all;
-    transform: translateY(-100%);
+    transform: translateY(-100%) translateZ(0);
     &.visible {
-        transform: translateY(0%);
+        transform: translateY(0%) translateZ(0);
         visibility: visible;
         opacity: 1;
     }
@@ -33,8 +33,10 @@
     min-width: 300px;
     max-width: 635px;
     transition: 0.5s all;
-    transform: translateX(-50%) translateY(-100%);
+    transform: translateY(-100%) translateZ(0);
     opacity: 0;
+	margin-left: -397.5px;
+	-webkit-font-smoothing: antialiased;
     background-color: #ffffff;
     &--notfixed {
         position: absolute;
@@ -42,7 +44,7 @@
     }
     &.visible {
         visibility: visible;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%) translateZ(0);
         opacity: 1;
     }
     .popup_close {
@@ -56,6 +58,7 @@
     }
 }
 .successfully {
-    transform: translateX(-50%) translateY(-50%) scale(1);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+	-webkit-font-smoothing: antialiased;
     text-align: center;
 }
